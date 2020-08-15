@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import winLoad from './helpers/OnLoad';
 import styles from './helpers/estilos';
 import { Grid, Box, Typography, Button, ButtonBase } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
@@ -12,46 +13,11 @@ const useStyles = makeStyles(styles);
 
 const Main = () => {
 
-    const sty = useStyles();
+    useEffect(() => {
+        winLoad.load();
+    }, []);
 
-    window.onload = () => {
-        const html5 = document.getElementById('html5');
-        const css = document.getElementById('css');
-        const js = document.getElementById('js');
-        //Logos Effect
-        const html5Logo = document.getElementById('html5Logo');
-        const cssLogo = document.getElementById('cssLogo');
-        const jsLogo = document.getElementById('jsLogo');
-        //Scroll Coordinates of main cards
-        const html5ScrollY = html5.getBoundingClientRect().top - 200;
-        const cssScrollY = css.getBoundingClientRect().top - 200;
-        const jsScrollY = js.getBoundingClientRect().top - 200;
-        //navBar Change Color
-        const item = document.getElementById('AppBar');
-        window.onscroll = () => {
-            //NavBar event
-            if (window.scrollY > 500) {
-                item.style.background = 'white';
-                item.style.color = 'black';
-            } else {
-                item.style.background = 'rgba(0,0,255,0.3)';
-                item.style.color = 'white';
-            }
-            //Apply Effects of main cards
-            if (window.scrollY > html5ScrollY) {
-                html5.style.opacity = '1';
-                html5Logo.style.transform = 'scale(1)';
-            }
-            if (window.scrollY > cssScrollY) {
-                css.style.opacity = '1';
-                cssLogo.style.transform = 'scale(1)';
-            }
-            if (window.scrollY > jsScrollY) {
-                js.style.opacity = '1';
-                jsLogo.style.transform = 'scale(1)';
-            }
-        }
-    }
+    const sty = useStyles();
 
     return (
         <>
@@ -84,7 +50,7 @@ const Main = () => {
                         id="html5Logo"
                         src="https://lineadecodigo.com/wp-content/uploads/2014/04/html5.png"
                         alt="html5 Logo"
-                        style={{transform:'scale(0)', transition:'0.5s ease-out'}}
+                        style={{ transform: 'scale(0)', transition: '0.5s ease-out' }}
                     />
                 </Grid>
             </Grid>
@@ -94,7 +60,7 @@ const Main = () => {
                         id="cssLogo"
                         src="https://cdn.iconscout.com/icon/free/png-256/css3-8-1175200.png"
                         alt="css3 logo"
-                        style={{transform:'scale(0)', transition:'0.5s ease-out'}}
+                        style={{ transform: 'scale(0)', transition: '0.5s ease-out' }}
                     />
                 </Grid>
                 <Grid item xs={12} lg={7} style={{ margin: '30px 0' }}>
@@ -144,11 +110,11 @@ const Main = () => {
                     </Grid>
                 </Grid>
                 <Grid item xs={12} lg={4} style={{ display: 'flex', justifyContent: 'center' }}>
-                    <img 
+                    <img
                         id="jsLogo"
                         src="https://cdn.iconscout.com/icon/free/png-256/javascript-2038874-1720087.png"
                         alt="js Logo"
-                        style={{transform:'scale(0)', transition:'0.5s ease-out'}}
+                        style={{ transform: 'scale(0)', transition: '0.5s ease-out' }}
                     />
                 </Grid>
             </Grid>
