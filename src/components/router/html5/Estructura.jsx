@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Nav from '../../header/Nav.jsx';
 import Banner from '../components/Banner.jsx';
 import Imgs from '../components/Imgs.jsx';
@@ -6,6 +6,14 @@ import Pags from '../components/Pags.jsx';
 import { Container, Typography, Grid } from '@material-ui/core';
 
 const Estructura = () => {
+
+    useEffect(() => {
+        window.scroll({
+            top:0,
+            behavior:'smooth'
+        })
+    }, []);
+
     return (
         <>
             <Nav color="tomato" />

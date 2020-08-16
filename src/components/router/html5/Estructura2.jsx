@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Nav from '../../header/Nav.jsx';
 import Banner from '../components/Banner.jsx';
 import Imgs from '../components/Imgs.jsx';
@@ -6,6 +6,14 @@ import Pags from '../components/Pags.jsx';
 import { Container, Typography } from '@material-ui/core';
 
 const Estructura2 = () => {
+
+    useEffect(() => {
+        window.scroll({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }, []);
+
     return (
         <>
             <Nav color="tomato" />
@@ -79,12 +87,12 @@ const Estructura2 = () => {
 </body>
 </html>`}
                 </pre>
-                <Imgs url="https://fotos.subefotos.com/ac15bc9bf6b539ce85c6a393740d120ao.png" desc="Resultado del código anterior"/>
+                <Imgs url="https://fotos.subefotos.com/ac15bc9bf6b539ce85c6a393740d120ao.png" desc="Resultado del código anterior" />
                 <Typography variant="h6" style={{ margin: '20px 0 10px 0' }} align="center">Conclusión</Typography>
                 <Typography variant="subtitle1" align="justify">
                     Exeptuando los atributos "Style", que sirven para estilizar el documento, todo lo demás deberían comprenderlo bien, ya que son solo etiquetas de texto e imágenes. Un documento web estructurado de ésta manera, tiene más chances de aparecer en los primeros lugares de un buscador como "Google", por lo tanto es una buena práctica que lo hagan asi. En la siguiente lección veremos algunas etiquetas más, luego haremos algunos ejemplos en el editor de código para reforzar lo aprendido.
                 </Typography>
-                <Pags prev="/html5/cuerpo" next="/html5/reforzando"/>
+                <Pags prev="/html5/cuerpo" next="/html5/reforzando" />
             </Container>
         </>
     )

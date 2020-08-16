@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Nav from '../../header/Nav.jsx';
 import Banner from '../components/Banner.jsx';
 import Imgs from '../components/Imgs.jsx';
@@ -6,6 +6,14 @@ import Pags from '../components/Pags.jsx';
 import { Container, Typography, List, ListItem } from '@material-ui/core';
 
 const Reforzando = () => {
+
+    useEffect(() => {
+        window.scroll({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }, []);
+
     return (
         <>
             <Nav color="tomato" />
@@ -263,9 +271,9 @@ const Reforzando = () => {
                 </Typography>
                 <Typography variant="h6" style={{ margin: '20px 0 10px 0' }} align="center">Conclusión</Typography>
                 <Typography variant="subtitle1" align="justify">
-                    Puede parecer muy engorroso y pesado tanta información junta(Listas, Hypervínculos, Tablas, etc...). Por eso les recomiendo que se tomen un descanso y lo vuelvan a leer al otro dia, practicando con el editor de código, creando de a poco sus propias páginas web, nadie los apura, tienen todo el tiempo que quieran. Les recuerdo que HTML5 es solo el principio del mundo de la internet, aún falta mucho por aprender y yo creo que ustedes podrán lograrlo y ser los mejores programadores web del mundo. Cuando logren asimilar e interiorizar todo lo que hemos visto hasta ahora, los invito a la siguiente lección, en la cuál veremos elementos multimedia como videos, audios e imagenes. 
+                    Puede parecer muy engorroso y pesado tanta información junta(Listas, Hypervínculos, Tablas, etc...). Por eso les recomiendo que se tomen un descanso y lo vuelvan a leer al otro dia, practicando con el editor de código, creando de a poco sus propias páginas web, nadie los apura, tienen todo el tiempo que quieran. Les recuerdo que HTML5 es solo el principio del mundo de la internet, aún falta mucho por aprender y yo creo que ustedes podrán lograrlo y ser los mejores programadores web del mundo. Cuando logren asimilar e interiorizar todo lo que hemos visto hasta ahora, los invito a la siguiente lección, en la cuál veremos elementos multimedia como videos, audios e imagenes.
                 </Typography>
-                <Pags prev="/html5/estructura2" next="/html5/multimedia"/>
+                <Pags prev="/html5/estructura2" next="/html5/multimedia" />
             </Container>
         </>
     )

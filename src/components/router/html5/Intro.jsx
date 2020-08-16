@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Nav from '../../header/Nav.jsx';
 import Banner from '../components/Banner.jsx';
 import Pags from '../components/Pags.jsx';
 import { Typography, Container, List, ListItem } from '@material-ui/core';
 
 const Intro = () => {
+
+    useEffect(() => {
+        window.scroll({
+            top:0,
+            behavior:'smooth'
+        })
+    }, []);
+
     return (
         <>
             <Nav color="tomato" />
