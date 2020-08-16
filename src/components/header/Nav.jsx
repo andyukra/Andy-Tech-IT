@@ -4,7 +4,7 @@ import { AppBar, Toolbar, Typography, IconButton } from '@material-ui/core';
 import { Drawer, List, ListItem, ListSubheader, Divider } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
-const Nav = ({color}) => {
+const Nav = ({ color }) => {
 
     const [drawerState, setDrawerState] = useState(false);
 
@@ -20,19 +20,34 @@ const Nav = ({color}) => {
                     <ListSubheader>
                         <Typography>HTML5</Typography>
                     </ListSubheader>
-                    <Link to="/html5/intro" style={{textDecoration:'none', color:'black'}}>
+                    <Link to="/html5/intro" style={{ textDecoration: 'none', color: 'black' }}>
                         <ListItem button>
                             <Typography>01. Introducción</Typography>
                         </ListItem>
                     </Link>
-                    <Link to="/html5/estructura" style={{textDecoration:'none', color:'black'}}>
+                    <Link to="/html5/estructura" style={{ textDecoration: 'none', color: 'black' }}>
                         <ListItem button>
                             <Typography>02. Estructura</Typography>
                         </ListItem>
                     </Link>
-                    <Link to="/html5/cuerpo" style={{textDecoration:'none', color:'black'}}>
+                    <Link to="/html5/cuerpo" style={{ textDecoration: 'none', color: 'black' }}>
                         <ListItem button>
                             <Typography>03. Cuerpo</Typography>
+                        </ListItem>
+                    </Link>
+                    <Link to="/html5/estructura2" style={{ textDecoration: 'none', color: 'black' }}>
+                        <ListItem button>
+                            <Typography>04. Estructura 2</Typography>
+                        </ListItem>
+                    </Link>
+                    <Link to="/html5/reforzando" style={{ textDecoration: 'none', color: 'black' }}>
+                        <ListItem button>
+                            <Typography>05. Reforzando</Typography>
+                        </ListItem>
+                    </Link>
+                    <Link to="/html5/multimedia" style={{ textDecoration: 'none', color: 'black' }}>
+                        <ListItem button>
+                            <Typography>06. Multimedia</Typography>
                         </ListItem>
                     </Link>
                 </List>
