@@ -54,15 +54,7 @@ const Main = () => {
                     />
                 </Grid>
             </Grid>
-            <Grid container justify="center" alignItems="center" className={sty.css} id="css">
-                <Grid item xs={12} lg={4} style={{ display: 'flex', justifyContent: 'center' }}>
-                    <img
-                        id="cssLogo"
-                        src="https://cdn.iconscout.com/icon/free/png-256/css3-8-1175200.png"
-                        alt="css3 logo"
-                        style={{ transform: 'scale(0)', transition: '0.5s ease-out' }}
-                    />
-                </Grid>
+            <Grid container style={{flexDirection:'row-reverse'}} justify="center" alignItems="center" className={sty.css} id="css">
                 <Grid item xs={12} lg={7} style={{ margin: '30px 0' }}>
                     <Typography variant="h4" style={{ fontWeight: 'bold' }}>
                         Curso introductorio de CSS3
@@ -84,6 +76,14 @@ const Main = () => {
                             <Typography>Algo sencillo</Typography>
                         </Grid>
                     </Grid>
+                </Grid>
+                <Grid item xs={12} lg={4} style={{ display: 'flex', justifyContent: 'center' }}>
+                    <img
+                        id="cssLogo"
+                        src="https://cdn.iconscout.com/icon/free/png-256/css3-8-1175200.png"
+                        alt="css3 logo"
+                        style={{ transform: 'scale(0)', transition: '0.5s ease-out' }}
+                    />
                 </Grid>
             </Grid>
             <Grid container justify="center" alignItems="center" className={sty.js} id="js">

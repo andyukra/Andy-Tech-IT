@@ -26,18 +26,16 @@ const styles = {
         transition:'2s ease-out',
         padding: '30px 15px',
         '@media(min-width:1025px)': {
-            clipPath: 'polygon(0% 0%, 100% 17%, 100% 100%, 0% 85%)',
+            clipPath: 'polygon(0 0, 100% 10%, 100% 100%, 0 90%)',
             padding: '80px 15px 50px 15px'
         }
     },
-    js: {
-        background: 'steelblue',
+    js: {   
         opacity : '0',
         transition: '2s ease-out',
         padding: '30px 15px',
-        color: 'white',
+        color: 'black',
         '@media(min-width:1025px)': {
-            clipPath: 'polygon(0% 10%, 100% 0%, 100% 89%, 0% 100%)',
             padding: '80px 15px 50px 15px'
         }
     },

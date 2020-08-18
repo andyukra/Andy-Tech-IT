@@ -10,16 +10,19 @@ const winLoad = {
         //Scroll Coordinates of main cards
         const html5ScrollY = html5.getBoundingClientRect().top - 200;
         const cssScrollY = css.getBoundingClientRect().top - 200;
-        const jsScrollY = js.getBoundingClientRect().top - 200;
+        const jsScrollY = js.getBoundingClientRect().top - 250;
         //navBar Change Color
         const item = document.getElementById('AppBar');
+        const item2 = document.getElementById('linkNav');
         window.onscroll = () => {
             //NavBar event
             if (window.scrollY > 500) {
                 item.style.background = 'white';
+                item2.style.color = 'black';
                 item.style.color = 'black';
             } else {
                 item.style.background = 'rgba(0,0,255,0.3)';
+                item2.style.color = 'white';
                 item.style.color = 'white';
             }
             //Apply Effects of main cards

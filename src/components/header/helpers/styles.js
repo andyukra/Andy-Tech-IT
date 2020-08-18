@@ -6,9 +6,7 @@ const styles = {
         '& > video': {
             width: '100%',
             '@media (max-width:1024px)': {
-                width: '300%',
-                height: '100vh',
-                marginLeft: '-900px'
+                width: '100%'
             },
             '@media(max-width:600px)': {
                 width: '380%',

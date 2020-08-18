@@ -11,12 +11,8 @@ const Nav = ({ color }) => {
     return (
         <>
             <Drawer open={drawerState} onClose={() => setDrawerState(false)} anchor="left">
-                <div style={{ widht: '100%', height: '150px', background: 'rgba(0,0,0,0.7)' }}></div>
-                <List>
-                    <ListSubheader>
-                        <Typography variant="h6">Cursos de AndyTech IT</Typography>
-                    </ListSubheader>
-                    <Divider />
+                <div style={{ widht: '100%', height: '150px', background: 'url("https://news.sap.com/africa/files/2017/12/in-memory-computing.jpg")', backgroundSize:'cover' }}></div>
+                <List style={{width:'250px'}}>
                     <ListSubheader>
                         <Typography style={{ margin: '5px 0' }}>HTML5</Typography>
                     </ListSubheader>
@@ -81,7 +77,7 @@ const Nav = ({ color }) => {
                     <IconButton onClick={() => setDrawerState(true)} color="inherit" style={{ marginRight: '15px' }}>
                         <MenuIcon />
                     </IconButton>
-                    <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
+                    <Link to="/" style={{ textDecoration: 'none', color:'white' }} id="linkNav">
                         <Typography variant="h5" style={{fontWeight:'bold'}}>
                             AndyTech IT
                         </Typography>

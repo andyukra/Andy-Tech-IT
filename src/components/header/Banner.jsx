@@ -51,7 +51,7 @@ const Banner = () => {
                     <Button onClick={() => setDialogState2(false)} style={{ margin: '10px 0' }} variant="contained" color="secondary">Entendido</Button>
                 </Box>
             </Dialog>
-            <video autoPlay muted loop id="myVideo">
+            <video autoPlay muted loop id="myVideo" poster="https://youmatter.world/app/uploads/sites/2/2019/11/tech-planet.jpg">
                 <source src="https://cdn.clickworker.com/wp-content/uploads/2020/06/aiStartpageHeading.mp4" type="video/mp4" />
                 <img src="https://youmatter.world/app/uploads/sites/2/2019/11/tech-planet.jpg" alt="alt img"/>
             </video>
