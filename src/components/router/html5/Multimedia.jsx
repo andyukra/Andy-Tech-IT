@@ -5,20 +5,31 @@ import Imgs from '../components/Imgs.jsx';
 import Pags from '../components/Pags.jsx';
 import { Container, Typography, List, ListItem, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import { Fab } from '@material-ui/core';
+import ArrowIcon from '@material-ui/icons/ExpandLess';
 
 const Multimedia = () => {
 
-    useEffect(() => {
+    const scrollTop = () => {
         window.scroll({
             top: 0,
             behavior: 'smooth'
         })
+    }
+
+    useEffect(() => {
+        scrollTop();
     }, []);
+
+    const fabHandler = () => scrollTop();
 
     return (
         <>
+            <Fab onClick={fabHandler} style={{ position: 'fixed', bottom: '2rem', right: '2rem', zIndex: '500' }} color="secondary">
+                <ArrowIcon />
+            </Fab>
             <Nav color="tomato" />
-            <Banner label="Multimedia" />
+            <Banner label="Multimedia" url="https://disenowebakus.net/imagenes/articulos/html5.jpg" />
             <Container maxWidth="sm">
                 <Typography
                     variant="h4"
@@ -86,7 +97,7 @@ const Multimedia = () => {
                 <Typography variant="subtitle1" align="justify">
                     Aqui damos por terminado este curso introductorio de HTML5, espero que les haya sido útil, me gustaría que practiquen creando sus propias páginas web en el editor de código y guardando el archivo con formato ".html". Este lenguaje HTML es muy nesesario aprenderlo para luego seguir con CSS y Javascript, ya que éstos dos últimos no sirven de nada si no se conoce bien las bases de éste. Lo siguiente que les sugiero que aprendan es un lenguaje maravilloso que le dará color y estilo a sus etiquetas de HTML, hablo del "CSS", y obviamente también hay un curso introductorio de CSS en este sitio, es gratuito y están todos invitados. Me despido de ustedes, si dios quiere nos veremos en el próximo curso "Introducción a CSS", muchas gracias por llegar hasta aqui y hasta pronto amigos.
                 </Typography>
-                <Link to="/" style={{textDecoration:'none', color:'white'}}>
+                <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
                     <Button style={{ margin: '20px 0' }} variant="contained" color="secondary" fullWidth={true}>Volver a Home</Button>
                 </Link>
             </Container>

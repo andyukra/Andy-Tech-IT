@@ -4,20 +4,31 @@ import Banner from '../components/Banner.jsx';
 import Imgs from '../components/Imgs.jsx';
 import Pags from '../components/Pags.jsx';
 import { Container, Typography, List, ListItem, ListSubheader } from '@material-ui/core';
+import { Fab } from '@material-ui/core';
+import ArrowIcon from '@material-ui/icons/ExpandLess';
 
 const Cuerpo = () => {
 
-    useEffect(() => {
+    const scrollTop = () => {
         window.scroll({
-            top:0,
-            behavior:'smooth'
+            top: 0,
+            behavior: 'smooth'
         })
+    }
+
+    useEffect(() => {
+        scrollTop();
     }, []);
+
+    const fabHandler = () => scrollTop();
 
     return (
         <>
+            <Fab onClick={fabHandler} style={{ position: 'fixed', bottom: '2rem', right: '2rem', zIndex: '500' }} color="secondary">
+                <ArrowIcon />
+            </Fab>
             <Nav color="tomato" />
-            <Banner label="Cuerpo" />
+            <Banner label="Cuerpo" url="https://disenowebakus.net/imagenes/articulos/html5.jpg" />
             <Container maxWidth="sm">
                 <Typography
                     variant="h4"

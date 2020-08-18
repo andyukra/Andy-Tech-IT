@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, IconButton } from '@material-ui/core';
 import { Drawer, List, ListItem, ListSubheader, Divider } from '@material-ui/core';
+import { Link } from "react-router-dom";
 import MenuIcon from '@material-ui/icons/Menu';
 
 const Nav = ({ color }) => {
@@ -18,7 +18,7 @@ const Nav = ({ color }) => {
                     </ListSubheader>
                     <Divider />
                     <ListSubheader>
-                        <Typography>HTML5</Typography>
+                        <Typography style={{ margin: '5px 0' }}>HTML5</Typography>
                     </ListSubheader>
                     <Link to="/html5/intro" style={{ textDecoration: 'none', color: 'black' }}>
                         <ListItem button>
@@ -50,6 +50,30 @@ const Nav = ({ color }) => {
                             <Typography>06. Multimedia</Typography>
                         </ListItem>
                     </Link>
+                    <Divider />
+                    <ListSubheader>
+                        <Typography style={{ margin: '5px 0' }}>CSS3</Typography>
+                    </ListSubheader>
+                    <Link to="/css3/intro" style={{ textDecoration: 'none', color: 'black' }}>
+                        <ListItem button>
+                            <Typography>01. Introducción</Typography>
+                        </ListItem>
+                    </Link>
+                    <Link to="/css3/selectores" style={{ textDecoration: 'none', color: 'black' }}>
+                        <ListItem button>
+                            <Typography>02. Selectores</Typography>
+                        </ListItem>
+                    </Link>
+                    <Link to="/css3/textos" style={{ textDecoration: 'none', color: 'black' }}>
+                        <ListItem button>
+                            <Typography>03. Textos</Typography>
+                        </ListItem>
+                    </Link>
+                    <Link to="/css3/modelocaja" style={{ textDecoration: 'none', color: 'black' }}>
+                        <ListItem button>
+                            <Typography>04. Modelo de caja</Typography>
+                        </ListItem>
+                    </Link>
                 </List>
             </Drawer>
             <AppBar style={{ background: `${color}`, transition: '0.7s ease-out' }} id="AppBar">
@@ -57,9 +81,11 @@ const Nav = ({ color }) => {
                     <IconButton onClick={() => setDrawerState(true)} color="inherit" style={{ marginRight: '15px' }}>
                         <MenuIcon />
                     </IconButton>
-                    <Typography>
-                        AndyTech IT
-                </Typography>
+                    <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
+                        <Typography variant="h5" style={{fontWeight:'bold'}}>
+                            AndyTech IT
+                        </Typography>
+                    </Link>
                 </Toolbar>
             </AppBar>
         </>

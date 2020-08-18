@@ -25,12 +25,12 @@ const useStyles = makeStyles({
     }
 });
 
-const Banner = ({ label }) => {
+const Banner = ({ label, url }) => {
 
     const sty = useStyles();
 
     return (
-        <section className={sty.root} style={{ backgroundImage: 'url("https://disenowebakus.net/imagenes/articulos/html5.jpg")' }}>
+        <section className={sty.root} style={{ backgroundImage: `url(${url})` }}>
             <div className={sty.div}>
                 <Typography
                     style={{ color: 'white', fontWeight: 'bold', fontSize: '50px' }}

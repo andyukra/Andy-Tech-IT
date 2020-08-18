@@ -4,20 +4,31 @@ import Banner from '../components/Banner.jsx';
 import Imgs from '../components/Imgs.jsx';
 import Pags from '../components/Pags.jsx';
 import { Container, Typography, Grid } from '@material-ui/core';
+import { Fab } from '@material-ui/core';
+import ArrowIcon from '@material-ui/icons/ExpandLess';
 
 const Estructura = () => {
 
-    useEffect(() => {
+    const scrollTop = () => {
         window.scroll({
-            top:0,
-            behavior:'smooth'
+            top: 0,
+            behavior: 'smooth'
         })
+    }
+
+    useEffect(() => {
+        scrollTop();
     }, []);
+
+    const fabHandler = () => scrollTop();
 
     return (
         <>
+            <Fab onClick={fabHandler} style={{ position: 'fixed', bottom: '2rem', right: '2rem', zIndex: '500' }} color="secondary">
+                <ArrowIcon />
+            </Fab>
             <Nav color="tomato" />
-            <Banner label="Estructura" />
+            <Banner label="Estructura" url="https://disenowebakus.net/imagenes/articulos/html5.jpg" />
             <Container maxWidth="sm">
                 <Typography
                     variant="h4"
@@ -79,13 +90,13 @@ const Estructura = () => {
                 />
                 <Typography variant="subtitle1" align="justify">
                     Aquí comienza lo divertido del curso, ya que <b>{`<body></body>`}</b> representa el cuerpo del documento y en él pondremos toda la información visible al usuario, como pueden ser imágenes, videos, textos, botones, formularios, etc...
-                    Es ésta etiqueta la que más nos interesa y en la que comenzaremos a profundizar en las siguientes lecciones.  
+                    Es ésta etiqueta la que más nos interesa y en la que comenzaremos a profundizar en las siguientes lecciones.
                 </Typography>
-                <hr/>
+                <hr />
                 <Typography variant="subtitle1">
                     No programamos nada interesante hasta ahora porque era muy nesesario que aprendan bien las bases de un documento HTML, pero a partir de la siguiente lección pondremos MANOS A LA OBRA y comenzaremos a agregar contenido "visual" para q el documento no se vea tan aburrido ;).
                 </Typography>
-                <Pags prev="/html5/intro" next="/html5/cuerpo"/>
+                <Pags prev="/html5/intro" next="/html5/cuerpo" />
             </Container>
         </>
     )
